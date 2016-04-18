@@ -40,5 +40,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TAG", "listAll: " + resultCursor.getString(resultCursor.getColumnIndex(DatabaseContract.UsersEntry.KEY_NAME)));
             Log.d("TAG", "listAll: " + resultCursor.getString(resultCursor.getColumnIndex(DatabaseContract.UsersEntry.KEY_AGE)));
         }while (resultCursor.moveToNext());
+
+        resultCursor.close();
     }
 }
